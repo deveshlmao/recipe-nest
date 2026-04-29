@@ -8147,7 +8147,7 @@ body {
       -ms-transform: translateX(0);
       -o-transform: translateX(0);
       transform: translateX(0);
-      width: 320px;
+      width: 250px;
       background: #fff;
       z-index: 999;
       position: fixed; }
@@ -8186,7 +8186,7 @@ h1, h2, h3, h4, h5,
   padding-bottom: 40px;
   padding-left: 2em;
   padding-right: 2em;
-  width: 25%;
+  width: 20%;
   position: fixed;
   bottom: 0;
   top: 0;

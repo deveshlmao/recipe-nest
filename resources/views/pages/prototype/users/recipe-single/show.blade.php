@@ -1,13 +1,45 @@
 <x-mylayouts.layout-prototype>
 
+
+<style>
+    .recipe-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .ingredients-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .ingredients-list li {
+        background: #f8f8f8;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    body {
+        margin-left: 375px;
+    }
+
+    .col-md-12 {
+        background: #f8f8f8;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    
+</style>
+
     <div class="container mt-5">
         <!-- Recipe Title and Image -->
         <div class="row">
             <div class="col-md-12 text-center">
-                <h1>Recipe Title</h1>
+                <h1>{{ $recipe->title }}</h1>
                 <div class="text-center">
                     <img class="recipe-image" style="width: 60%"
-                        src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        src="{{ $recipe->getImage() }}"
                         alt="Chocolate Cake">
                 </div>
             </div>
@@ -18,12 +50,8 @@
             <div class="col-md-12">
                 <h2>Ingredients</h2>
                 <ul class="ingredients-list">
-                    <li>Ingredients</li>
-                    <li>Ingredients</li>
-                    <li>Ingredients</li>
-                    <li>Ingredients</li>
-                    <li>Ingredients</li>
-                    <li>Ingredients</li>
+                    <li>{!! $recipe->ingredients !!}</li>
+
                 </ul>
             </div>
         </div>
@@ -32,12 +60,9 @@
         <div class="row mt-4">
             <div class="col-md-12">
                 <h2>Instructions</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis veniam impedit omnis culpa repudiandae
-                    temporibus, aperiam corrupti ipsam optio tempora unde doloribus esse a veritatis nemo laudantium
-                    dolore eum blanditiis!</p>
+                <p class="instructions">{!! $recipe->instructions !!}</p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam doloribus voluptas dolores eum ducimus
-                    natus saepe eius odio id iste.</p>
+                
             </div>
         </div>
 

@@ -35,16 +35,16 @@
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
 			<nav id="colorlib-main-menu" role="navigation">
 				<ul>
-					<li class="colorlib-active"><a href="index.html">Home</a></li>
-					<li><a href="fashion.html">Fashion</a></li>
-					<li><a href="travel.html">Travel</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li class="colorlib-active"><a href="{{ route('home') }}">Home</a></li>
+					<li><a href="{{ route('chefs.index') }}">Chefs</a></li>
+					<li><a href="{{ route('recipes.index') }}">Recipes</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
 
 			<div class="colorlib-footer">
-				<h1 id="colorlib-logo" class="mb-4"><a href="index.html" style="background-image: url(images/bg_1.jpg);">Andrea <span>Moore</span></a></h1>
+				<h1 id="colorlib-logo" class="mb-4"><a href="index.html" style="background-image: url(images/bg_1.jpg);">Recipe <span>Nest</span></a></h1>
 				<div class="mb-4">
 					<h3>Subscribe for newsletter</h3>
 					<form action="#" class="colorlib-subscribe-form">

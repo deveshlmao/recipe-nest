@@ -9,12 +9,14 @@ class RecipeController extends Controller
 {
     public function index () {
         $recipe_data = Recipe::list()->paginate(6);
-        return view ('pages.prototype.recipes.index', compact('recipe_data'));
+        return view ('pages.prototype.users.recipe-list.index', compact('recipe_data'));
     }
 
     public function show (string $id) {
-        $recipe = Recipe::recipe()->author($id)->first();
+        $recipe = Recipe::list()->recipe($id)->first();
         $chef = $recipe->user;
-        return view ('pages.prototype.recipes.single.show', compact('recipe'));
+        return view ('pages.prototype.users.recipe-single.show', compact('recipe' , 'chef'));
     }
+
+    
 }

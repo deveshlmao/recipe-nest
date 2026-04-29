@@ -1,15 +1,36 @@
 <x-mylayouts.layout-prototype :showSidebar="false" :col="12">
 
 
+        <!-- Styles -->
+<style>
+    .profile {
+        padding: 2rem !important;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    p {
+        padding-left: 10px;
+    }
+
+    body {
+        margin-left: 350px;
+    }
+</style>
+
     <section class="profile">
         {{-- Source: https://bootstrapbrain.com/component/bootstrap-about-us-section-snippet-example/ --}}
 
 
         <!-- About 2 - Bootstrap Brain Component -->
-    @foreach($chef_data as $chef)
 
         <section class="py-3 py-md-5">
+
             <div class="container">
+
                 <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
                     <div class="col-12 col-lg-6">
                         <img class="img-fluid rounded" loading="lazy"
@@ -63,10 +84,12 @@
                         </div>
                     </div>
                 </div>
+
             </div>
+
+
         </section>
     </section>
-     @endforeach    
 
 
 
@@ -95,9 +118,9 @@
 
         <script src="https://cdn.jsdelivr.net/gh/vaakash/socializer@f794acd/js/socializer.min.js"></script>
         <script>
-            (function(){
-    socializer( '.socializer' );
-}());
+            (function() {
+                socializer('.socializer');
+            }());
         </script>
     </section>
 
@@ -185,7 +208,7 @@
         </div>
 
         <!-- CDN Link to SB Forms Scripts -->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script? src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
     </section>
 
