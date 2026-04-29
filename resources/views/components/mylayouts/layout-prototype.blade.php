@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Andrea - Free Bootstrap 4 Template by Colorlib</title>
+    <title>RecipeNest</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -38,13 +38,13 @@
 					<li class="colorlib-active"><a href="{{ route('home') }}">Home</a></li>
 					<li><a href="{{ route('chefs.index') }}">Chefs</a></li>
 					<li><a href="{{ route('recipes.index') }}">Recipes</a></li>
-					<li><a href="#">About</a></li>
+					<li><a href="{{ route('filament.author.pages.dashboard') }}">Dashboard</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
 
 			<div class="colorlib-footer">
-				<h1 id="colorlib-logo" class="mb-4"><a href="index.html" style="background-image: url(images/bg_1.jpg);">Recipe <span>Nest</span></a></h1>
+				<h1 id="colorlib-logo" class="mb-4"><a href="{{route ('home') }}" style="background-image: url(template_default/images/gradient.jpeg);">Recipe <span>Nest</span></a></h1>
 				<div class="mb-4">
 					<h3>Subscribe for newsletter</h3>
 					<form action="#" class="colorlib-subscribe-form">

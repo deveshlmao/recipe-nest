@@ -8,6 +8,9 @@ use Livewire\Attributes\On;
 
 class Portfolio extends Component
 {
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
+
     public $search = '';
     public $sort = '';
     public $chef;

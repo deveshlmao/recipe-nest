@@ -17,7 +17,6 @@
                     <div class="card border-light-subtle p-4">
                         <div class="row gy-3 align-items-center">
                             <div class="col-md-4">
-                                @foreach($chefs as $chef)
                                 <a href="#!" class="bsb-hover-image d-block rounded overflow-hidden">
                                     <img class="img-fluid author-avatar bsb-scale bsb-hover-scale-up" loading="lazy"
                                         src="{{ $chef->getImage() }}" alt="Iris Henry">
@@ -79,5 +78,5 @@
             </div>
         </div>
     </section>
-@endforeach
+
 </div>

@@ -27,11 +27,13 @@ Route::get('/chefs/{id}', [ChefController::class, 'show'])->name('chefs.show');
 // Route to show author portfolio
 Route::get('/chefs/{id}/portfolio', [ChefController::class, 'showPortfolio'])->name('chefs.portfolio.show');
 
-
+Route::get('/authors/profile/{id}/edit', [ChefController::class, 'edit'])->name('authors.profile.edit');
 
 // Include the additional routes for prototype
 require base_path('routes/prototype.php');
 
 Auth::routes();
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

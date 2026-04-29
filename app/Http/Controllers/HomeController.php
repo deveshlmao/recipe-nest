@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use App\Models\Recipe;
 
 class HomeController extends Controller
 {
@@ -12,9 +15,12 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        $home = Storage::disk('public')->get('home.json');
-        return view('pages.prototype.authors.home.dashboard', compact('home'));
+    public function index () {
+        $chef_data = User::list()->paginate(6);
+        return view('pages.prototype.users.home.homepage', compact( 'chef_data'));
     }
+
+    
+    
+
 }

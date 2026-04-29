@@ -16,20 +16,20 @@ class UserForm
             ->components([
                 TextInput::make('name')
                     ->required(),
-                // TextInput::make('email')
-                //     ->label('Email address')
-                //     ->email()
-                //     ->required(),
-                // DateTimePicker::make('email_verified_at'),
-                // TextInput::make('password')
-                //     ->password()
-                //     ->required(),
-                // TextInput::make('role')
-                //     ->required()
-                //     ->default('user'),
-                // TextInput::make('profile')
-                //     ->required()
-                //     ->default('images/profiles/default.jpg'),
+                 TextInput::make('email')
+                     ->label('Email address')
+                     ->email()
+                     ->required(),
+                 DateTimePicker::make('email_verified_at'),
+                 TextInput::make('password')
+                     ->password()
+                     ->required(),
+                 TextInput::make('role')
+                     ->required()
+                     ->default('user'),
+                 TextInput::make('profile')
+                     ->required()
+                     ->default('images/profiles/default.jpg'),
                 FileUpload::make('image_name')
                     ->image()
                     ->disk('profiles')

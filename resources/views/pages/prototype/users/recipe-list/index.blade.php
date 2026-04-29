@@ -11,14 +11,23 @@
       margin-left: 30px;
       justify-content: center;
       align-items: center;
-      padding:20px !important;
+      padding: 10px !important;
 
 
+    }
+
+    body {
+      margin-left: 300px;
     }
 
     h1 {
       text-align: center;
     }
+
+   .row {
+    border-bottom: 3px solid #000013;
+ 
+   }
   </style>
 
 
@@ -40,88 +49,34 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat excepturi officia quibusdam exercitationem facere nulla ad veritatis tenetur sequi numquam?</p>
         <a class="btn btn-primary" href="{{ $recipe->getLink() }}">Read More</a>
       </div>
-    </div>
-    <!-- /.row -->
-    @endforeach
 
-    <hr>
-
-    <!-- Project Two -->
-    <div class="row">
-      <div class="col-md-7">
-        <a href="#">
-          <img class="recipe-list img-fluid rounded mb-3 mb-md-0" src="https://plus.unsplash.com/premium_photo-1700752343056-e89926bf5ff9?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </a>
-      </div>
-      <div class="col-md-5">
-        <h3>Recipe Name</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-        <a class="btn btn-primary" href="#">Read More</a>
-      </div>
     </div>
     <!-- /.row -->
 
     <hr>
+              @endforeach
 
-    <!-- Project Three -->
-    <div class="row">
-      <div class="col-md-7">
-        <a href="#">
-          <img class="recipe-list img-fluid rounded mb-3 mb-md-0" src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </a>
-      </div>
-      <div class="col-md-5">
-        <h3>Recipe Name</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-        <a class="btn btn-primary" href="#">Read More</a>
-      </div>
-    </div>
-    <!-- /.row -->
-
-    <hr>
-
-    <!-- Project Four -->
-    <div class="row">
-
-      <div class="col-md-7">
-        <a href="#">
-          <img class="recipe-list img-fluid rounded mb-3 mb-md-0" src="https://images.unsplash.com/photo-1539136788836-5699e78bfc75?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </a>
-      </div>
-      <div class="col-md-5">
-        <h3>Recipe Name</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
-        <a class="btn btn-primary" href="#">Read More</a>
-      </div>
-    </div>
-    <!-- /.row -->
-
-    <hr>
-
+              
     <!-- Pagination -->
     <ul class="pagination justify-content-center">
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-          <span class="sr-only">Previous</span>
-        </a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">1</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">2</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#">3</a>
-      </li>
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-          <span class="sr-only">Next</span>
-        </a>
-      </li>
+      <div class="row">
+        <div class="col">
+          <div class="block-27">
+            <ul>
+              <li><a href="#">&lt;</a></li>
+              <li class="active"><span>1</span></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">&gt;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </ul>
+
+
 
     {{ $recipe_data ->links() }}
 

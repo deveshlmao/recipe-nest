@@ -79,7 +79,7 @@
       @foreach($chef_data as $chef)
 
       <div class="card border-0 shadow chef-list">
-        <img src="{{ $chef->image_url }}" class="card-img-top" alt="...">
+        <img src="{{ $chef->getImage() }}" class="card-img-top" alt="...">
         <div class="card-body">
 
           <h5 class="card-title mb-0 text-center">{{ $chef->name }}</h5>
@@ -87,12 +87,9 @@
 
           <div class="text-center">
             <a class="btn btn-primary mx-2" href="{{ $chef->getLink() }}">View Profile</a>
-            <a class="btn btn-primary mx-2" href="{{ route('prototype.chefs.show', $chef->id) }}">View Portfolio</a>
+            <a class="btn btn-primary mx-2" href="{{ $chef->getPortfolioLink() }}">View Portfolio</a>
           </div>
-
-
         </div>
-
       </div>
       @endforeach
     </div>
