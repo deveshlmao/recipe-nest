@@ -1,5 +1,27 @@
 <x-mylayouts.layout-prototype :showSideBar="false" :col="12">
 
+  <style>
+    .bsb-author-2 {
+      background-color: #f8f9fa;
+    }
+
+    .bsb-author-2 .card-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .bsb-author-2 .card-text {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+
+    .container1 {
+      margin-left: 380px !important;
+    }
+  </style>
+
+
+
 
   {{-- @include('pages.custom.users.portfolio.mini-profile') --}}
 
@@ -27,21 +49,17 @@
                 <div class="col-md-4">
                   <a href="#!" class="bsb-hover-image d-block rounded overflow-hidden">
                     <img class="img-fluid author-avatar bsb-scale bsb-hover-scale-up" loading="lazy"
-                      src="{{ asset('storage/images/profiles/harps-joseph-tAvpDE7fXgY-unsplash.jpg') }}"
+                      src="{{ $chef->getImage() }}"
                       alt="Iris Henry">
                   </a>
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Article written by</h6>
+                    <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
                     <h3 class="card-title mb-2">
-                      <a class="card-link link-dark text-decoration-none" href="#!">Iris Henry</a>
+                      <a class="card-link link-dark text-decoration-none" href="#!">{{$chef->name}}</a>
                     </h3>
-                    <p class="card-text mb-3">I am skilled in all aspects of web design, from
-                      planning
-                      and development to design and testing. I also have experience in web
-                      development
-                      technologies.</p>
+                    <p class="card-text mb-3">{{ $chef->short_description }}</p>
                     <ul class="bsb-social-media nav m-0">
                       <li class="nav-item">
                         <a class="nav-link link-dark" href="#!">
@@ -114,8 +132,12 @@
       <h1 class="my-4">Recipes from author
       </h1>
 
-      <!-- Project One -->
+      @foreach($recipe_data as $recipe)
+
+
+      <!-- Recipes -->
       <div class="row">
+
         <div class="col-md-7">
           <a href="#">
             <img class="recipe-list img-fluid rounded mb-3 mb-md-0" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
@@ -126,87 +148,15 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
           <a class="btn btn-primary" href="#">Read More</a>
         </div>
+        
       </div>
-      <!-- /.row -->
+
 
       <hr>
 
-      <!-- Project Two -->
-      <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="recipe-list img-fluid rounded mb-3 mb-md-0" src="https://plus.unsplash.com/premium_photo-1700752343056-e89926bf5ff9?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Recipe Name</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-          <a class="btn btn-primary" href="#">Read More</a>
-        </div>
-      </div>
-      <!-- /.row -->
 
-      <hr>
 
-      <!-- Project Three -->
-      <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="recipe-list img-fluid rounded mb-3 mb-md-0" src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Recipe Name</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-          <a class="btn btn-primary" href="#">Read More</a>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <hr>
-
-      <!-- Project Four -->
-      <div class="row">
-
-        <div class="col-md-7">
-          <a href="#">
-            <img class="recipe-list img-fluid rounded mb-3 mb-md-0" src="https://images.unsplash.com/photo-1539136788836-5699e78bfc75?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Recipe Name</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
-          <a class="btn btn-primary" href="#">Read More</a>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <hr>
-
-      <!-- Pagination -->
-      <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">1</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-      </ul>
+      @endforeach
 
     </div>
     <!-- /.container -->

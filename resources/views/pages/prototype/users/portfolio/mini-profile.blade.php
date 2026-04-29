@@ -26,7 +26,7 @@
                                 
                                 <div class="card-body">
                                     
-                                    <h6 class="card-subtitle mb-2 text-body-secondary">Article written by</h6>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
                                     <h3 class="card-title mb-2">
                                         <a class="card-link link-dark text-decoration-none" href="#!">{{ $chef->name }}</a>
                                     </h3>
