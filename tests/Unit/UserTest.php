@@ -1,5 +1,5 @@
 <?php
-/*
+
 namespace Tests\Unit;
 
 use App\Models\User;
@@ -32,4 +32,3 @@ class UserTest extends TestCase {
     }
     
 }
-*/

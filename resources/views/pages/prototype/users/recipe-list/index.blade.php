@@ -4,16 +4,13 @@
   <style>
     .recipe-list {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      height: 300px;
       display: flex;
       flex-direction: column;
       margin-left: 30px;
       justify-content: center;
       align-items: center;
       padding: 10px !important;
-
-
     }
 
     body {
@@ -25,9 +22,23 @@
     }
 
    .row {
-    border-bottom: 3px solid #000013;
- 
+    background: #f8f8f8;
+    padding: 10px;
    }
+
+   .recipe-list img {
+    max-width: 250px !important;
+    object-fit: contain !important;
+    max-height: 250px !important;
+    margin-left: 20px;
+   }
+
+  hr {
+    border: 1px solid #000019;
+  }
+
+  
+   
   </style>
 
 
@@ -55,26 +66,7 @@
 
     <hr>
               @endforeach
-
-              
-    <!-- Pagination -->
-    <ul class="pagination justify-content-center">
-      <div class="row">
-        <div class="col">
-          <div class="block-27">
-            <ul>
-              <li><a href="#">&lt;</a></li>
-              <li class="active"><span>1</span></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">&gt;</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </ul>
+    
 
 
 

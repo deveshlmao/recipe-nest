@@ -1,5 +1,5 @@
 <?php
-/*
+
 namespace Tests\Unit;
 
 use App\Models\Recipe;
@@ -25,4 +25,3 @@ class RecipeTest extends TestCase
     
    
 }
-*/

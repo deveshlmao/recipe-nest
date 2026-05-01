@@ -5,9 +5,11 @@ namespace App\Livewire\Portfolio;
 use App\Models\User;
 use Livewire\Component;
 use Livewire\Attributes\On;
+use Livewire\WithPagination;
 
 class Portfolio extends Component
 {
+
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
 
@@ -47,14 +49,14 @@ class Portfolio extends Component
     }
 
     /**
-     * render recipes
+     * Undocumented function
      *
      * @return void
      */
     public function render()
     {
         $recipe_data = $this->chef->recipes()->filter($this->values)->where('published', true)->paginate(3);
-        return view('pages/custom/users/portfolio/portfolio', [
+        return view('pages/prototype/users/portfolio/portfolio', [
             'recipe_data' => $recipe_data,
         ]);
     }

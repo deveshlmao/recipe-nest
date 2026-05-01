@@ -5,6 +5,7 @@
     .recipe-image {
         max-width: 100%;
         height: auto;
+        object-fit: cover;
     }
 
     .ingredients-list {
@@ -29,6 +30,11 @@
         border-radius: 5px;
     }
 
+    hr {
+        border: 1px solid #eee;
+        margin: 20px 0;
+    }
+
     
 </style>
 
@@ -45,7 +51,7 @@
             </div>
         </div>
 
-        <!-- Recipe Info -->
+        <!-- Recipe Ingredients -->
         <div class="row mt-4">
             <div class="col-md-12">
                 <h2>Ingredients</h2>

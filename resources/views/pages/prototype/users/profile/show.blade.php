@@ -80,6 +80,7 @@
                                 </div>
                                 <button type="button" class="btn bsb-btn-xl btn-outline-primary rounded-pill">Connect
                                     Now</button>
+                                <button type="button" class="btn bsb-btn-xl btn-outline-primary rounded-pill" ><a href="{{ $chef->getPortfolioLink() }}">View Portfolio</a></button>
                             </div>
                         </div>
                     </div>

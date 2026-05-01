@@ -34,7 +34,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            @endforeach
                         </div> 
 
                         <div class="row">
@@ -91,7 +91,7 @@
                     </div> 
                 </div> 
             </div> 
-            @endforeach
+            
         </section>
     </div><!-- END COLORLIB-MAIN -->
     </div><!-- END COLORLIB-PAGE -->    
