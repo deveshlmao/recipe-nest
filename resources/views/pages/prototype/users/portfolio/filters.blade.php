@@ -1,3 +1,9 @@
+
+<style>
+    .form-group {
+        margin-right: 15px;
+    }
+</style>
 <div>
     <div class="d-flex my-4">
         <div class="mr-auto">

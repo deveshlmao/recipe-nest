@@ -25,7 +25,7 @@
     .slider-heading {
         position: relative;
         padding: 0px 0px;
-        color: purple;
+        color: black;
     }
 
     /*
